@@ -77,3 +77,17 @@ leftBtn.addEventListener("click", () => {
 
 // 6. 처음 열 때 1번 회원의 할 일
 loadTodos(userSelect.value);
+
+
+const user = { name: "김오즈", age: 20, admin: false };
+const text = JSON.stringify(user);
+console.log(text);
+console.log(typeof text);
+const back = JSON.parse(text);
+console.log(back.age + 1);
+console.log(typeof back);
+try {
+  JSON.parse("{'name': '김오즈'}");
+} catch (error) {
+  console.log(error.name);
+}
